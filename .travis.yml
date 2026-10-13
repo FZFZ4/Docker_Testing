@@ -6,6 +6,6 @@ before_install:
   - docker build -t fzfz4/docker_testing -f Dockerfile.dev .
 
 script:
-  - docker run fzfz4/docker_testing npm run test -- --coverage
+  - docker run -e CI=true fzfz4/docker_testing npm run test -- --coverage
 
 
